@@ -2,7 +2,7 @@ from mysql.connector import MySQLConnection, Error
 from python_mysql_dbconfig import read_db_config
 
 def insert_data(temp, humidity, batV, airflow, pressure):
-    query = "INSERT INTO Sensor_data(temperature, humidity, battery_voltage, airflow, pressure) " \
+    query = "INSERT INTO sensor_data(temperature, humidity, battery_voltage, airflow, pressure) " \
             "VALUES(%s,%s,%s,%s,%s)"
     args = (temp, humidity, batV, airflow, pressure)
 
