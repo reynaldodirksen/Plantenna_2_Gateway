@@ -36,18 +36,27 @@ pressure int(3)
 ````
 
 now the database is created with the necessary columns. 
+to exit simply run the command ```exit``` or ```quit```
 
 To access the database with python code we need to install the mysql connector.
 This is done by executing the following commands:
 ```
 sudo pip3 install mysql-connector-python
 ```
-run
-```
-sudo pip3 search mysql-connector | grep --color mysql-connector-python
-sudo pip3 install mysql-connector-python-rf
-```
-because it may be that the connector has issues accessing the database if not created in this way.
+in the next step we need to remove the create a new user called plantenna@localhost with the password plantenna.
+The reason for this is that to run the database using root@localhost we always have to run using sudo, but not using a new user.
+This user needs to have all privileges to the database.
+To do this run the following:
+````
+sudo mysql
+
+CREATE USER 'plantenna'@'localhost' IDENTIFIED BY 'plantenna';
+
+GRANT ALL PRIVILEGES ON *.* TO 'plantenna'@'localhost' WITH GRANT OPTION;
+````
+
+
+
 
 
 
