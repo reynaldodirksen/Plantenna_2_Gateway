@@ -25,7 +25,7 @@ create database plantenna;
 
 use plantenna;
 
-create table Sensor_data (
+create table sensor_data (
 number int not null auto_increment primary key,
 temperature int(3),
 humidity int(3),
