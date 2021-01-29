@@ -53,7 +53,7 @@ sudo python local_database.py
 if the file is run from python 3 it will not work. The rest of the project has been done with python 2.7 which is the reason the code
 for the local database is also in python 2.7
 
-
+Note that to test everything you must install all dependencies from cloud control (BME and SMBUS2), and main_control and ble_network_control(bluepy)
 To test everything working together, the files necessary are ble_network_control.py, local_database.py, main_control.py, and spms_cloud_control.py
 make sure the key etc in spms_cloud_control.py is correct,
 in local_database.py make sure the user, password and host are correct. 
