@@ -54,6 +54,11 @@ if the file is run from python 3 it will not work. The rest of the project has b
 for the local database is also in python 2.7
 
 
+To test everything working together, the files necessary are ble_network_control.py, local_database.py, main_control.py, and spms_cloud_control.py
+make sure the key etc in spms_cloud_control.py is correct,
+in local_database.py make sure the user, password and host are correct. 
+then run ```sudo python main_control.py ``` followed by the name of the NRF, in this case 'SPMS N01'. Note if it contains spaces it has to be written as string
+
 ## Current status
 The current status is a working database. The data received from NRF's are sent to the database, and if the pi connects to the cloud, 
 all data in the database is sent to the cloud and deleted from the database. 
